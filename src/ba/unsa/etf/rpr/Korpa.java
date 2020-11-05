@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr;
 public class Korpa {
     private final int kapacitet=50;
     private Artikl[] niz = new Artikl[kapacitet];
-    private int broj_artikala;
+    private int broj_artikala=0;
 
     public Korpa() {
     }
@@ -28,7 +28,6 @@ public class Korpa {
                 Artikl a=niz[i];
                 for(int j=i;j<broj_artikala;j++)
                     niz[j]=niz[j+1];
-                niz[broj_artikala+1]=null;
                 return a;
             }
         }

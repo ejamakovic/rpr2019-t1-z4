@@ -2,11 +2,8 @@ package ba.unsa.etf.rpr;
 
 public class Supermarket {
     private final int kapacitet=1000;
-    private int broj_artikala;
+    private int broj_artikala=0;
     private Artikl[] niz = new Artikl[kapacitet];
-
-    public Supermarket() {
-    }
 
     public void dodajArtikl(Artikl A) throws Exception {
         if(broj_artikala+1<kapacitet){
@@ -28,7 +25,7 @@ public class Supermarket {
                 Artikl a=niz[i];
                 for(int j=i;j<broj_artikala;j++)
                     niz[j]=niz[j+1];
-                niz[broj_artikala+1]=null;
+                niz[broj_artikala]=null;
                 return a;
             }
         }
