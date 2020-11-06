@@ -2,6 +2,11 @@ package ba.unsa.etf.rpr;
 
 public class Supermarket {
     private final int kapacitet=1000;
+
+    public void setBroj_artikala(int broj_artikala) {
+        this.broj_artikala = broj_artikala;
+    }
+
     private int broj_artikala=0;
     private Artikl[] niz = new Artikl[kapacitet];
 
